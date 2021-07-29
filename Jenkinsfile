@@ -10,10 +10,11 @@ stage('Build'){
 sh "${Maven_Dir}/bin/mvn clean package"
 }
 
+ /*  
 stage('SonarReport'){
 sh "${Maven_Dir}/bin/mvn sonar:sonar"
 }
-/*
+
 stage('UploadArtifact'){
 sh "${Maven_Dir}/bin/mvn deploy"
 }
