@@ -1,0 +1,12 @@
+node{
+
+def Maven_Dir = tool name: "v3.8.1"
+
+stage('GitHub_Repo'){
+git branch: 'development', credentialsId: 'db628a14-f58b-4a0b-9ee0-609ccab46a4b', url: 'https://github.com/DevOps-gittool/maven-web-application.git'
+}
+
+stage('Build'){
+sh "${Maven_Dir}/bin/mvn clean package"
+}
+}
